@@ -8,8 +8,6 @@ spring:
       discovery:
         service-name: ${spring.application.name}
         register-health-check: true
-server:
-  port: 9999
 ### ribbon的负载均衡是客户端的负载均衡
 productService:
   ribbon:
