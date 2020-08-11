@@ -13,4 +13,4 @@ spring:
       discovery:
         service-name: ${spring.application.name}
         register-health-check: true
-name: xiaochen
+name: xiaotao
