@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+    gateway:
+      routes:
+        - id: user_route
+          uri: lb://userService
+          predicates:
+            - Path=/user/**
+#            - Cookie=username,herui
+#            - After=2020-08-10T16:39:30.390+08:00[Asia/Shanghai]
+        - id: product_route
+          uri: lb://productService
+          predicates:
+            - Path=/product/**
+server:
+  port: 8989
